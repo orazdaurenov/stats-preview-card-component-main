@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  --primary-main-bg: hsl(233, 47%, 7%);
+  --primary-card-bg: hsl(244, 38%, 16%);
+  --primary-soft-violet-accent: hsl(277, 64%, 61%);
+  --secondary-white-main-heading: hsl(0, 0%, 100%);
+  --secondary-slightly-transparent-white-main-paragraph: hsla(
+    0,
+    0%,
+    100%,
+    0.75
+  );
+  --secondary-slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+  --ff-Inter: "Inter", sans-serif;
+  --ff-lexend: "Lexend Deca", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: var(--primary-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image > img {
+  object-fit: cover;
+  width: 100%;
+  filter: hue-rotate(10deg);
+}
+
+.container {
+  margin: 3em auto;
+  overflow: hidden;
+  background-color: var(--primary-card-bg);
+  border-radius: 12px;
+  width: 70%;
+}
+
+article {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    max-width: 1440px;
+    flex-direction: row-reverse;
+  }
+
+  article {
+    padding: 6em;
+    width: 50%;
+  }
+
+  .image {
+    width: 50%;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+article {
+  padding: 5em 3em;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: var(--secondary-white-main-heading);
+  font-family: var(--ff-Inter);
+  margin-bottom: 1em;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+h3,
+ul {
+  font-family: var(--ff-lexend);
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--secondary-slightly-transparent-white-main-paragraph);
+  margin-bottom: 2em;
+}
+
+span {
+  color: var(--primary-soft-violet-accent);
+}
+
+ul li {
+  list-style: none;
+  color: var(--secondary-slightly-transparent-white-stat-headings);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.numbers {
+  color: var(--secondary-white-main-heading);
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
